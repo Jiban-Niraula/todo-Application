@@ -23,6 +23,8 @@ ini_set('display_errors', 1);
         font-weight: bold;
     }
 </style>
+
+<link rel="icon" type="image/x-icon" href="list.png">
 </head>
 <body>
     
