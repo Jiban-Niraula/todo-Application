@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
 
     if (empty($task)) {
         $_SESSION['empty'] = "Task cannot be empty.";
-        header('Location: index.php');
+        header('Location: ../views/new.php');
         exit();
     }
 
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
     $conn->close();
 
     // Redirect back to index page
-    header('Location: index.php');
+    header('Location: ../views/index.php');
     exit();
 }
 ?>

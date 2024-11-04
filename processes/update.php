@@ -16,7 +16,7 @@ if (isset($_POST['updatetask'])) {
 
     if (empty($task)) {
         $_SESSION['empty'] = "Task cannot be empty.";
-        header('Location: index.php');
+        header('Location: new.php');
         exit();
     }
 
@@ -36,7 +36,7 @@ if (isset($_POST['updatetask'])) {
    
 
     // Redirect back to index page
-    header('Location: index.php');
+    header('Location: ../views/index.php');
     exit();
 
 ?>

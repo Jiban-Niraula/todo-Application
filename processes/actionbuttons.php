@@ -17,7 +17,7 @@ if (isset($_POST['delete'])) {
     } else {
         $_SESSION['delete_msg_failed'] = "Error preparing statement: " . $conn->error;
     }
-    header('Location: index.php');
+    header('Location: ../views/index.php');
     exit();
 }
 
@@ -35,7 +35,7 @@ if (isset($_POST['setCompleted'])) {
     } else {
         $_SESSION['complete_msg_failed'] = "Error preparing statement: " . $conn->error;
     }
-    header('Location: index.php');
+    header('Location: ../views/index.php');
     exit();
 }
 
@@ -50,8 +50,9 @@ if (isset($_POST['update'])) {
         $_SESSION['id'] = $row['id'];
         $_SESSION['task'] = $row['task'];
         $_SESSION['update'] = true; // Set update flag for index.php
+        header('Location: ../views/new.php');
+        exit();
         }
     } 
-    header('Location: index.php');
-    exit();
+    
 ?>
